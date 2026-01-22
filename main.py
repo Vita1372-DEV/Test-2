@@ -1,5 +1,6 @@
 from datetime import date
 import json
+import time
 
 ARCHIVO = "datos.json"
 
@@ -73,10 +74,12 @@ while True:
         print("¡Excelente!")
         datos["hecho"] += 1
         guardar_data(datos)
+        time.sleep(2)
         break
 
     elif respuesta == "no":
         print("No te preocupes, mañana es un nuevo día para intentarlo.")
+        time.sleep(2)
         break
 
     else:
@@ -86,3 +89,4 @@ print(
     f"Llevas {datos['hecho']} de {datos['objetivo_semanal']} "
     f"veces esta semana."
 )
+time.sleep(5)
